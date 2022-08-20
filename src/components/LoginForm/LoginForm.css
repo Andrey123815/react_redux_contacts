@@ -1,0 +1,21 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    max-width: 300px;
+    min-height: 290px;
+
+    margin: 15% auto auto auto;
+    padding: 20px 40px 30px;
+
+    border: #1976D2 2px solid;
+    border-radius: 20px;
+}
+
+.login-form__preview {
+    font-size: 20px;
+    color: #1976D2;
+
+    margin-bottom: 30px;
+}

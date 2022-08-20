@@ -4,7 +4,9 @@
             "id": 1,
             "name": "Leanne Graham",
             "username": "Bret",
-            "email": "Sincere@april.biz",
+            "avatar": "%PUBLIC_URL%/../server/images/avatar.jpg",
+            "email": "@",
+            "password": "1",
             "address": {
                 "street": "Kulas Light",
                 "suite": "Apt. 556",
@@ -27,7 +29,8 @@
             "id": 2,
             "name": "Ervin Howell",
             "username": "Antonette",
-            "email": "Shanna@melissa.tv",
+            "email": "@",
+            "password": "2",
             "address": {
                 "street": "Victor Plains",
                 "suite": "Suite 879",
