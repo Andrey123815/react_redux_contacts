@@ -1,0 +1,10 @@
+.contact-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background: white;
+    min-width: 100%;
+
+    border: 1px solid #b6b3b3;
+}

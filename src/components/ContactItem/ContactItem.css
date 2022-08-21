@@ -1,0 +1,20 @@
+.contact-item {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    padding: 15px;
+
+    border: 1px solid #b6b3b3;
+    background: white;
+}
+
+.contact-item__user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item__side-menu {
+    display: flex;
+    flex-direction: column;
+}

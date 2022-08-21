@@ -5,7 +5,7 @@ import {defaultUserInfo, IMainUserInfoContext, MainUserInfoContext} from "../../
 
 const AuthUserSettings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const NotAuthUserSettings = ['Login'];
-const defaultUsername = 'User';
+const DefaultUsername = 'User';
 
 function Header() {
     const userContext = useContext<IMainUserInfoContext>(MainUserInfoContext);
@@ -52,7 +52,7 @@ function Header() {
                     </Typography>
 
                     <Typography sx={{ mr: 2, fontSize: 20 }}>
-                        {userContext.userInfo.user?.name || defaultUsername}
+                        {userContext.userInfo.user?.name || DefaultUsername}
                     </Typography>
 
                     <Box sx={{ flexGrow: 0 }}>
