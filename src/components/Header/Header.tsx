@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {AppBar, Toolbar, Box, Menu, IconButton, Tooltip, MenuItem, Avatar, Typography} from "@mui/material";
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import {IMainUserInfoContext, MainUserInfoContext} from "../../configurations/User";
 
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const AuthUserSettings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const NotAuthUserSettings = ['Login'];
+const defaultUsername = 'User';
 
 function Header() {
+    const userContext = useContext<IMainUserInfoContext>(MainUserInfoContext);
     const [anchorElUser, setAnchorElUser] = React.useState<null | undefined |  HTMLElement>(null);
 
     const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -15,11 +19,13 @@ function Header() {
         setAnchorElUser(null);
     };
 
+    const settings = userContext.userInfo.auth ? AuthUserSettings : NotAuthUserSettings;
+
     return (
         <div>
             <AppBar position="static">
                 <Toolbar>
-                    <AutoStoriesIcon />
+                    <AutoStoriesIcon sx={{ mr: 1 }}/>
                     <Typography
                         variant="h6"
                         noWrap
@@ -38,6 +44,11 @@ function Header() {
                     >
                         Contact's
                     </Typography>
+
+                    <Typography sx={{ mr: 2, fontSize: 20 }}>
+                        {userContext.userInfo.user?.name || defaultUsername}
+                    </Typography>
+
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

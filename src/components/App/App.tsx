@@ -1,14 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Header from "../Header/Header";
 import Content from "../Content/Content";
+import {defaultUserInfo, IUser, IUserInfo, MainUserInfoContext} from "../../configurations/User";
 
 function App() {
+    const [userInfo, setUserInfo] = useState<IUserInfo>(defaultUserInfo);
+    const updateUser = (user: IUser = {email: ''}, auth: boolean = false) => setUserInfo({user, auth});
+
     return (
-        <div className="header">
+        <MainUserInfoContext.Provider value={{userInfo: userInfo, updateUserInfo: updateUser}}>
             <Header />
             <Content />
-        </div>
+        </MainUserInfoContext.Provider>
     );
 }
 

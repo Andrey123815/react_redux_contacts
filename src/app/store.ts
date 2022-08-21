@@ -1,8 +1,6 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-// import {userApi} from "../components/LoginForm/LoginFormAPI";
+import { configureStore } from '@reduxjs/toolkit';
 import {setupListeners} from "@reduxjs/toolkit/query";
-import {userApi} from "../services/user";
-// import {userApi} from "../components/LoginForm/LoginFormAPI";
+import {userApi} from "../services/UserAPI";
 
 export const store = configureStore({
   reducer: {
@@ -11,7 +9,7 @@ export const store = configureStore({
   middleware: getDefaultMiddleware => getDefaultMiddleware().concat(userApi.middleware),
 });
 
-// setupListeners(store.dispatch)
+setupListeners(store.dispatch)
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
