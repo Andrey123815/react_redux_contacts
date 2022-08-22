@@ -28,3 +28,9 @@
 ```
 v17.7.1
 ```
+
+### Check all commits history you can at branch `master`
+
+```
+https://github.com/Andrey123815/react_redux_contacts/tree/master
+```
