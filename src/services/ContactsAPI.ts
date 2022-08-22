@@ -11,10 +11,19 @@ export const contactsApi = createApi({
             query: (id: number) => ({
                 url: `/contacts`,
                 params: {
-                    contactOwner: id
+                    contactOwnerID: id
                 }
             }),
             providesTags: ['Contact'],
+        }),
+        getContact: builder.mutation<IContact[], number>({
+            query: (id: number) => ({
+                url: `/contacts`,
+                params: {
+                    id
+                }
+            }),
+            invalidatesTags: ['Contact'],
         }),
         createContact: builder.mutation<IUser[], IContact>({
             query: (contact) => ({
@@ -43,6 +52,7 @@ export const contactsApi = createApi({
 })
 
 export const {
+    useGetContactMutation,
     useGetContactsQuery,
     useDeleteContactMutation,
     useCreateContactMutation,

@@ -96,16 +96,6 @@
   ],
   "contacts": [
     {
-      "id": 1,
-      "contactOwnerID": 1,
-      "name": "Nicholas Runolfsdottir V",
-      "username": "Maxime_Nienow",
-      "email": "Sherwood@rosamond.me",
-      "street": "Ellsworth Summit",
-      "city": "Aliyaview",
-      "phone": "586.493.6943 x140"
-    },
-    {
       "id": 2,
       "contactOwnerID": 1,
       "name": "Glenna Reichert",
@@ -126,13 +116,22 @@
       "phone": "024-648-3804"
     },
     {
-      "city": "Moscow",
-      "phone": "8956856567",
-      "street": "Petrova",
-      "contactOwnerID": 1,
-      "email": "retro@gmail.com",
+      "city": "dbdbdfb",
+      "phone": "dbdbdfbd",
+      "street": "dbdffbdbfbd",
+      "contactOwner": 0,
+      "email": "dfbdbf",
       "id": 4,
-      "name": "Andey Diakonov"
+      "name": "Fsddbdf"
+    },
+    {
+      "city": "dfgdfg",
+      "phone": "dfdgdf",
+      "street": "dfgdfgd",
+      "contactOwnerID": 1,
+      "email": "dfgfd",
+      "id": 5,
+      "name": "dbdfbd dd"
     }
   ]
 }

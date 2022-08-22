@@ -5,11 +5,8 @@ export interface IUserLikeContact {
     avatar?: string,
     email: string,
     password?: number,
-    // address?: {
     city: string,
     street: string,
-        // zipcode?: string,
-    // },
     phone: string,
 }
 

@@ -10,8 +10,8 @@ import {IContact} from "../../configurations/Contact";
 
 interface Props {
     contact: IContact,
-    onDelete: () => void,
-    onUpdate?: () => void
+    onDelete: (e: React.MouseEvent<HTMLElement>) => void,
+    onOpen: (e: React.MouseEvent<HTMLElement>) => void
 }
 
 const PropertyNotSet: string  = 'не задан';
@@ -19,7 +19,7 @@ const PropertyNotSet: string  = 'не задан';
 function ContactItem(props: Props) {
     const {name, email, phone} = props.contact;
     return (
-        <div className="contact-item">
+        <div onClick={props.onOpen} className="contact-item">
             <div className="contact-item__user-info">
                 <div className="user-info__up-line">
                     <Avatar {...stringAvatar(name)} />

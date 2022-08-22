@@ -3,11 +3,15 @@ import SearchBar from "../SearchBar/SearchBar";
 import ContactBlock from "../ContactBlock/ContactBlock";
 import './SideContent.css';
 
-function SideContent() {
+export interface ContactClick {
+    contactClick: (id: number) => void
+}
+
+function SideContent(props: ContactClick) {
     return (
         <div className="side-content">
             <SearchBar />
-            <ContactBlock />
+            <ContactBlock contactClick={props.contactClick}/>
         </div>
     );
 }

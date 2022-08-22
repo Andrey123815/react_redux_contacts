@@ -3,35 +3,15 @@ import ContactEditor from "../ContactEditor/ContactEditor";
 import Button from "@mui/material/Button";
 import './CentralContent.css';
 import {useCreateContactMutation} from "../../services/ContactsAPI";
-import {defaultContact, IContact} from "../../configurations/Contact";
-import {MainUserInfoContext} from "../../configurations/User";
+import {CurrentContactContext} from "../../configurations/Contact";
 
-export type ContactIdentType = 'email' | 'name' | 'phone' | 'city' | 'street';
-export type ActionType = ContactIdentType | 'clean';
-export interface Action {
-    type: ActionType,
-    payload: string
+export interface Mode {
+    updateMode: boolean
 }
 
-function reducer(state: IContact, action: Action): IContact {
-    const {type, payload} = action;
-    if (type === 'clean') {
-        return defaultContact;
-    }
+function CentralContent(props: Mode) {
+    const {contact,dispatch} = React.useContext(CurrentContactContext);
 
-    return {
-        ...state,
-        [type]: payload
-    };
-}
-
-function CentralContent() {
-    const userContext = React.useContext(MainUserInfoContext);
-
-    let userContact: IContact = defaultContact;
-    userContact.contactOwnerID = userContext.userInfo.user.id;
-
-    const [contact, dispatch] = React.useReducer(reducer, userContact);
     const [createContact,] = useCreateContactMutation();
 
     const handleClick = async () => {
@@ -41,13 +21,13 @@ function CentralContent() {
 
     return (
         <div className="central-content">
-            <ContactEditor updateContact={dispatch} inputContactData={contact} />
+            <ContactEditor />
             <Button
                 onClick={handleClick}
                 style={{marginTop: "60px", width: 400, marginLeft: "auto", marginRight: "auto", height: 50}}
                 variant="contained"
             >
-                Создать контакт
+                {props.updateMode ? 'Сохранить изменения' : 'Создать контакт'}
             </Button>
         </div>
     );
