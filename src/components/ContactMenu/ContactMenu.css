@@ -1,0 +1,30 @@
+.contact-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background: white;
+    min-width: 100%;
+
+    border-top: 1px solid #b6b3b3;
+    border-bottom: 1px solid #b6b3b3;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contact-menu:nth-child(1), .contact-menu:nth-child(3)  {
+    max-width: 25%;
+    border-radius: 0;
+}
+
+.contact-menu > :nth-child(1) {
+    border-right: 1px solid #b6b3b3;
+}
+
+.contact-menu > :nth-child(3) {
+    border-left: 1px solid #b6b3b3;
+}
+
+.contact-menu > :nth-child(2) {
+    width: 50%;
+}

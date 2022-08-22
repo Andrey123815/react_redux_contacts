@@ -1,0 +1,134 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "avatar": "",
+      "email": "@",
+      "password": "1",
+      "street": "Kulas Light",
+      "city": "Gwenborough",
+      "phone": "89515207442"
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "email": "@",
+      "password": "2",
+      "street": "Victor Plains",
+      "city": "Wisokyburgh",
+      "phone": "89653282040"
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "email": "Nathan@yesenia.net",
+      "street": "Douglas Extension",
+      "city": "McKenziehaven",
+      "phone": "89831723931"
+    },
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "email": "Julianne.OConner@kory.org",
+      "street": "Hoeger Mall",
+      "city": "South Elvis",
+      "phone": "867545634523"
+    },
+    {
+      "id": 5,
+      "name": "Chelsey Dietrich",
+      "email": "Lucio_Hettinger@annie.ca",
+      "street": "Skiles Walks",
+      "city": "Roscoeview",
+      "phone": "89511214677"
+    },
+    {
+      "id": 6,
+      "name": "Mrs. Dennis Schulist",
+      "email": "Karley_Dach@jasper.info",
+      "street": "Norberto Crossing",
+      "city": "South Christy",
+      "phone": "89653710956"
+    },
+    {
+      "id": 7,
+      "name": "Kurtis Weissnat",
+      "email": "Telly.Hoeger@billy.biz",
+      "street": "Rex Trail",
+      "city": "Howemouth",
+      "phone": "89535854005"
+    },
+    {
+      "id": 8,
+      "name": "Nicholas Runolfsdottir V",
+      "email": "Sherwood@rosamond.me",
+      "street": "Ellsworth Summit",
+      "city": "Aliyaview",
+      "phone": "89677913154"
+    },
+    {
+      "id": 9,
+      "name": "Glenna Reichert",
+      "email": "Chaim_McDermott@dana.io",
+      "street": "Dayna Park",
+      "city": "Bartholomebury",
+      "phone": "89503048720"
+    },
+    {
+      "id": 10,
+      "name": "Clementina DuBuque",
+      "email": "Rey.Padberg@karina.biz",
+      "street": "Kattie Turnpike",
+      "city": "Lebsackbury",
+      "phone": "89615247278"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 2,
+      "contactOwnerID": 1,
+      "name": "Glenna Reichert",
+      "email": "curt@yandex.ru",
+      "street": "Dayna Park",
+      "city": "Bartholomebury",
+      "phone": "89453456789"
+    },
+    {
+      "id": 3,
+      "contactOwnerID": 1,
+      "name": "Clementina Duque",
+      "email": "cwerwet@mail.ru",
+      "street": "Kattie Turnpike",
+      "city": "Lebsackbury",
+      "phone": "89615247278"
+    },
+    {
+      "city": "Москва",
+      "phone": "89653710956",
+      "street": "Васильевская",
+      "contactOwner": 0,
+      "email": "dfbdbf",
+      "id": 4,
+      "name": "Angry Bird"
+    },
+    {
+      "city": "Волгоград",
+      "phone": "89674563454",
+      "street": "Смоленская",
+      "contactOwnerID": 1,
+      "email": "smol@mail.ru",
+      "id": 5,
+      "name": "Petrov Ivan"
+    },
+    {
+      "city": "Москва",
+      "phone": "87877575675",
+      "street": "Питерская",
+      "contactOwnerID": 1,
+      "email": "ome@gmail.com",
+      "id": 6,
+      "name": "Ivanov Sergey"
+    }
+  ]
+}

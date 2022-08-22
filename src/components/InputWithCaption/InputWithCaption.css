@@ -1,0 +1,17 @@
+.input-with-caption_side {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-with-caption__text_side {
+    margin: auto 20px auto 50px;
+}
+
+.input-with-caption__text_top {
+    margin-bottom: 10px;
+}
+
+.input-with-caption_top {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,8 @@
+.side-content {
+    display: flex;
+    flex-direction: column;
+
+    width: 20%;
+    height: 100vh;
+    border: 1px solid #c9bfbf;
+}

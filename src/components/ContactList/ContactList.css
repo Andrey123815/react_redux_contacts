@@ -1,0 +1,23 @@
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: rgba(182,179,179,0.35);
+    height: calc(100vh - 162px);
+}
+
+.contact-list_empty {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+
+    font-size: 18px;
+    background: #1976D2;
+    color: white;
+    border-radius: 10px;
+
+    max-width: 90%;
+    height: 100px;
+}

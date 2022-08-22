@@ -1,0 +1,44 @@
+.contact-item {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    padding: 15px;
+
+    border: 1px solid rgba(182,179,179,0.35);
+    background: white;
+    cursor: pointer;
+}
+
+.contact-item__user-info {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+.user-info__up-line {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.up-line__username {
+    margin: auto 5px auto 10px;
+}
+
+.up-line__status {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.user-info__info-line {
+    margin-bottom: 5px;
+    padding-left: 25px;
+}
+
+.contact-item__side-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 15px;
+}
