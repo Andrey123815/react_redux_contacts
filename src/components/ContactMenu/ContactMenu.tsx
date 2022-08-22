@@ -8,22 +8,21 @@ function ContactMenu() {
     return (
         <div className="contact-menu">
             <IconButton
-                size="large"
+                size="medium"
                 edge="start"
                 color="inherit"
                 aria-label="menu"
-                sx={{ mr: 2 }}
             >
-                <MenuIcon />
+                <MenuIcon style={{width: 40, height: 40, color: "#1976D2"}} />
             </IconButton>
+            <div style={{fontSize: 20, textAlign: "center", margin: "auto"}}>Список контактов</div>
             <IconButton
-                size="large"
+                size="medium"
                 edge="start"
                 color="inherit"
                 aria-label="menu"
-                sx={{ mr: 2 }}
             >
-                <PersonAddAlt1Icon />
+                <PersonAddAlt1Icon style={{width: 40, height: 40, color: "#1976D2"}} />
             </IconButton>
         </div>
     );

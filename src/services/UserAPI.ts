@@ -18,8 +18,6 @@ export const userApi = createApi({
                     password
                 }
             }),
-
-            transformResponse: (response: IUser[]) => response,
         }),
     }),
 })

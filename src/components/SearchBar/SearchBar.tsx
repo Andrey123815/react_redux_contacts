@@ -7,7 +7,8 @@ function SearchBar() {
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
-        backgroundColor: alpha(theme.palette.common.white, 0.15),
+        backgroundColor: "#e5dfdf",
+        opacity: 0.7,
         '&:hover': {
             backgroundColor: alpha(theme.palette.common.white, 0.25),
         },
@@ -15,13 +16,13 @@ function SearchBar() {
         marginLeft: 0,
         width: '100%',
         [theme.breakpoints.up('sm')]: {
-            marginLeft: theme.spacing(3),
-            width: 'auto',
+            marginLeft: theme.spacing(0),
+            width: '100%',
         },
     }));
 
     const SearchIconWrapper = styled('div')(({ theme }) => ({
-        padding: theme.spacing(0, 2),
+        padding: theme.spacing(0, 0),
         height: '100%',
         position: 'absolute',
         pointerEvents: 'none',

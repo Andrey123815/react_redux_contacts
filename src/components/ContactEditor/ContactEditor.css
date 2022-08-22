@@ -5,11 +5,14 @@
     width: 550px;
     min-height: 300px;
 
-    margin: 200px auto auto;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 30px;
 
     border: 1px solid grey;
     border-radius: 20px;
+    background: white;
 }
 
 .contact-editor__preview-block {

@@ -1,17 +1,20 @@
 import React from "react";
 
-export interface IUser {
-    id?: number,
-    name?: string,
+export interface IUserLikeContact {
+    name: string,
     avatar?: string,
     email: string,
     password?: number,
-    address?: {
-        city: string,
-        street: string,
-        zipcode?: string,
-    },
-    phone?: string,
+    // address?: {
+    city: string,
+    street: string,
+        // zipcode?: string,
+    // },
+    phone: string,
+}
+
+export interface IUser extends IUserLikeContact{
+    id: number
 }
 
 export interface IUserInfo {
@@ -24,8 +27,10 @@ export interface IMainUserInfoContext {
     updateUserInfo: (user: IUser, auth: boolean) => void
 }
 
+export const defaultUser: IUser = {city: "", phone: "", street: "", id: 0, email: '', name: 'User'};
+
 export const defaultUserInfo: IUserInfo = {
-    user: {email: ''},
+    user: defaultUser,
     auth: false
 };
 

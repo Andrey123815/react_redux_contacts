@@ -1,11 +1,12 @@
 import React, {useContext} from 'react';
 import {AppBar, Toolbar, Box, Menu, IconButton, Tooltip, MenuItem, Avatar, Typography} from "@mui/material";
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
-import {defaultUserInfo, IMainUserInfoContext, MainUserInfoContext} from "../../configurations/User";
+import {defaultUserInfo, IMainUserInfoContext, IUser, MainUserInfoContext} from "../../configurations/User";
+import {stringAvatar} from "../../libraries/AvatarView";
 
-const AuthUserSettings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-const NotAuthUserSettings = ['Login'];
-const DefaultUsername = 'User';
+const AuthUserSettings: string[] = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const NotAuthUserSettings: string[] = ['Login'];
+const DefaultUsername: string = 'User';
 
 function Header() {
     const userContext = useContext<IMainUserInfoContext>(MainUserInfoContext);
@@ -26,7 +27,11 @@ function Header() {
     };
 
     const settings = userContext.userInfo.auth ? AuthUserSettings : NotAuthUserSettings;
-
+    const user: IUser = userContext.userInfo.user;
+    let username: string = 'User';
+    if (user && user.name) {
+        username = user.name;
+    }
     return (
         <div>
             <AppBar position="static">
@@ -58,7 +63,7 @@ function Header() {
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                                <Avatar {...stringAvatar(username)} />
                             </IconButton>
                         </Tooltip>
                         <Menu

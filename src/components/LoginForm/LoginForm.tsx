@@ -46,12 +46,9 @@ function LoginForm() {
         event.preventDefault();
     };
 
-    const user = userContext.userInfo.user;
-
     return (
         <React.Fragment>
             <div className="login-form">
-                <span>{user.name}</span>
                 <span className="login-form__preview">Log In</span>
                 <TextField onChange={handleChange('email')} id="outlined-basic" label="Email" variant="outlined" />
                 <FormControl sx={{ mb: "20px", widthMax: '100%' }} variant="outlined">

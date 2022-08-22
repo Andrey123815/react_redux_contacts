@@ -1,3 +1,5 @@
 .contact-block {
-    max-width: 100%;
+    width: 100%;
+    min-height: 1000px;
+    overflow: auto;
 }
