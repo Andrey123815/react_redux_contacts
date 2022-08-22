@@ -14,6 +14,7 @@ due to the built-in search by name, quickly find the right contact.
 4) RTK Query
 5) JSON-server
 6) Package `concurrently` (for parallel starting JSON-server and React App)
+7) MUI components API
 
 ## How to start
 
