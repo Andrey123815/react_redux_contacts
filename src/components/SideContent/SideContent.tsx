@@ -4,7 +4,7 @@ import ContactBlock from "../ContactBlock/ContactBlock";
 import './SideContent.css';
 
 export interface ContactClick {
-    contactClick: (id: number) => void
+    contactClick: (id: number) => void,
 }
 
 function SideContent(props: ContactClick) {

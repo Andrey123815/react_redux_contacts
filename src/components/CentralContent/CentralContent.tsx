@@ -21,6 +21,10 @@ function CentralContent(props: Mode) {
     const [updateContact,] = useUpdateContactMutation();
 
     const handleClick = async({isUpdatingMode, setIsUpdatingMode}: IUpdateUserInfo) => {
+        if (contact && !contact.name) {
+            return;
+        }
+
         if (isUpdatingMode) {
             await updateContact(contact);
             setIsUpdatingMode(false);
