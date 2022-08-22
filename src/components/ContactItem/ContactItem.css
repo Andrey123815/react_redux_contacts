@@ -5,7 +5,7 @@
     width: 100%;
     padding: 15px;
 
-    border: 1px solid #b6b3b3;
+    border: 1px solid rgba(182,179,179,0.35);
     background: white;
     cursor: pointer;
 }

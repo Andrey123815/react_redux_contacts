@@ -34,14 +34,13 @@ function reducer(state: IContact, action: Action): IContact {
 
 function Content() {
     const userContext = useContext<IMainUserInfoContext>(MainUserInfoContext);
+    const [isUpdatingMode, setIsUpdatingMode] = React.useState<boolean>(false);
 
     let userContact: IContact = defaultContact;
     userContact.contactOwnerID = userContext.userInfo.user.id;
 
     const [contact, dispatch] = React.useReducer(reducer, userContact);
     const [getCertainContact,] = useGetContactMutation();
-
-    const [isUpdatingMode, setIsUpdatingMode] = React.useState<boolean>(false);
 
     const contactClick = async(id: number) => {
         await getCertainContact(id).unwrap().then((contacts: IContact[]) => {

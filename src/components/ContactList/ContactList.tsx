@@ -1,14 +1,15 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import ContactItem from "../ContactItem/ContactItem";
 import './ContactList.css';
-import {useDeleteContactMutation, useGetContactsQuery} from "../../services/ContactsAPI";
-import {MainUserInfoContext} from "../../configurations/User";
+import {useDeleteContactMutation,} from "../../services/ContactsAPI";
 import {IContact} from "../../configurations/Contact";
-import {ContactClick} from "../SideContent/SideContent";
+import {ContactProps} from "../ContactBlock/ContactBlock";
 
-function ContactList(props: ContactClick) {
-    const userContext = useContext(MainUserInfoContext);
-    const {data: contacts} = useGetContactsQuery(userContext.userInfo.user.id);
+interface Props extends ContactProps {
+    allUserContacts: IContact[]
+}
+
+function ContactList(props: Props) {
     const [deleteContact,] = useDeleteContactMutation();
 
     const handleDeleteContact = async (e: React.MouseEvent<HTMLElement>, contactID: number) => {
@@ -21,16 +22,32 @@ function ContactList(props: ContactClick) {
         props.contactClick(contactID);
     }
 
+    const {searchedContacts, allUserContacts} = props;
+
+    const content: IContact[] = (searchedContacts.contacts.length && searchedContacts.contacts) || allUserContacts;
+
+    if (searchedContacts.searchName && !searchedContacts.contacts.length) {
+        return (
+            <div className="contact-list">
+                <div className="contact-list_empty">
+                    По вашему запросу ничего не найдено.
+                    Напоминаем, что поиск производится по имени.<br/>
+                    Перепроверьте, пожалуйста, указанные данные
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="contact-list">
-            {!contacts &&
+            {!searchedContacts.searchName && !searchedContacts.contacts.length && !props.allUserContacts &&
                 <div className="contact-list_empty">
                     Вы пока не имеете контактов.
                     Попробуйте создать один, заполнив обязательное поле имени в форме создания контакта
                     и нажав на кнопку 'создать контакт'
                 </div>
             }
-            {contacts && (contacts as IContact[]).map((contact) => {
+            {content && (content as IContact[]).map((contact) => {
                 return (
                     <ContactItem key={contact.id} contact={contact}
                                         onDelete={(e: React.MouseEvent<HTMLElement>) => handleDeleteContact(e, contact.id)}

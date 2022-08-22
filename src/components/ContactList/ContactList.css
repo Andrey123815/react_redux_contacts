@@ -3,8 +3,7 @@
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
-    background: #b6b3b3;
-
+    background: rgba(182,179,179,0.35);
     height: calc(100vh - 162px);
 }
 

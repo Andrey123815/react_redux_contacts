@@ -1,63 +1,54 @@
 import React from 'react';
-import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
-import InputBase from '@mui/material/InputBase';
+import {Search} from "../../libraries/SearchView";
+import Button from '@mui/material/Button';
+import CancelIcon from '@mui/icons-material/Cancel';
+import IconButton from "@mui/material/IconButton";
+import {InputBase} from "@mui/material";
+import {IContact} from "../../configurations/Contact";
+import {useSearchLikelyContactsMutation} from "../../services/ContactsAPI";
+import {IContactsWithSearchName} from "../SideContent/SideContent";
 
-function SearchBar() {
-    const Search = styled('div')(({ theme }) => ({
-        position: 'relative',
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: "#e5dfdf",
-        opacity: 0.7,
-        '&:hover': {
-            backgroundColor: alpha(theme.palette.common.white, 0.25),
-        },
-        marginRight: theme.spacing(2),
-        marginLeft: 0,
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            marginLeft: theme.spacing(0),
-            width: '100%',
-        },
-    }));
+interface ISearchName {
+    setterSearchContacts: (contactsData: IContactsWithSearchName) => void
+}
 
-    const SearchIconWrapper = styled('div')(({ theme }) => ({
-        padding: theme.spacing(0, 0),
-        height: '100%',
-        position: 'absolute',
-        pointerEvents: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-    }));
+function SearchBar(props: ISearchName) {
+    const [searchInputText, setSearchInputText] = React.useState<string>('');
+    const [searchLikelyContacts,] = useSearchLikelyContactsMutation();
 
-    const StyledInputBase = styled(InputBase)(({ theme }) => ({
-        color: 'inherit',
-        '& .MuiInputBase-input': {
-            padding: theme.spacing(1, 1, 1, 0),
-            // vertical padding + font size from searchIcon
-            paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-            transition: theme.transitions.create('width'),
-            width: '100%',
-            [theme.breakpoints.up('sm')]: {
-                width: '12ch',
-                '&:focus': {
-                    width: '20ch',
-                },
-            },
-        },
-    }));
+    const search = async () => {
+        await searchLikelyContacts(searchInputText)
+            .unwrap()
+            .then((contacts: IContact[]) => {
+                props.setterSearchContacts({contacts: contacts, searchName: searchInputText})
+            });
+    }
+
+    const handleCancelSearch = () => {
+        setSearchInputText('');
+        props.setterSearchContacts({contacts: [], searchName: ''})
+    }
 
     return (
         <div>
-            <Search>
-                <SearchIconWrapper>
+            <Search sx={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+                <div style={{marginTop: "auto", marginBottom: 4, marginRight: "10px", marginLeft: "5px"}}>
                     <SearchIcon />
-                </SearchIconWrapper>
-                <StyledInputBase
+                </div>
+                <InputBase
                     placeholder="Search…"
-                    inputProps={{ 'aria-label': 'search' }}
-                />
+                    value={searchInputText}
+                    onChange={(e) => {
+                        setSearchInputText(e.target.value);
+                    }}/>
+                <div style={{display: "flex", flexDirection: "row", height: "100%"}}>
+                    <IconButton sx={{color: "black"}}>
+                        <CancelIcon onClick={() => handleCancelSearch()} />
+                    </IconButton>
+                    <Button sx={{maxWidth: 80, height: "100%", marginRight: 0.1, marginBottom: 0.2, marginTop: "auto"}}
+                            variant="contained" onClick={() => search()}>Искать</Button>
+                </div>
             </Search>
         </div>
     );

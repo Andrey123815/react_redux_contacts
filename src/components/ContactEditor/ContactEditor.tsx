@@ -4,11 +4,7 @@ import InputWithCaption from "../InputWithCaption/InputWithCaption";
 import './ContactEditor.css';
 import {stringAvatar} from "../../libraries/AvatarView";
 import {CurrentContactContext, IContactContext} from "../../configurations/Contact";
-
-const NAME_REGEXP: RegExp = /^[А-ЯA-Z][a-zа-я]{1,20}(\s[А-ЯA-Z][a-zа-я]{1,20})?$/;
-const EMAIL_REGEXP: RegExp = /^((([0-9A-Za-z]+[-0-9A-z.]+[0-9A-Za-z]+)|([0-9А-Яа-я]+[-0-9А-я.]+[0-9А-Яа-я]+))@([-A-Za-z]+\.){1,2}[-A-Za-z]{2,})$/u;
-const PHONE_REGEXP: RegExp = /^8[0-9]{12}$/;
-const ADDRESS_REGEXP: RegExp = /^[А-Яа-яa-zA-Z]{2,}$/;
+import {ADDRESS_REGEXP, EMAIL_REGEXP, NAME_REGEXP, PHONE_REGEXP} from "../../configurations/Validation";
 
 function ContactEditor() {
     const {contact,} = React.useContext<IContactContext>(CurrentContactContext);

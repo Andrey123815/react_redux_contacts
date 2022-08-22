@@ -16,6 +16,15 @@ export const contactsApi = createApi({
             }),
             providesTags: ['Contact'],
         }),
+        searchLikelyContacts: builder.mutation<IContact[], string>({
+            query: (name: string) => ({
+                url: 'contacts/',
+                params: {
+                    _sort: 'name',
+                    name_like: name,
+                }
+            }),
+        }),
         getContact: builder.mutation<IContact[], number>({
             query: (id: number) => ({
                 url: `/contacts`,
@@ -57,4 +66,5 @@ export const {
     useDeleteContactMutation,
     useCreateContactMutation,
     useUpdateContactMutation,
+    useSearchLikelyContactsMutation,
 } = contactsApi;

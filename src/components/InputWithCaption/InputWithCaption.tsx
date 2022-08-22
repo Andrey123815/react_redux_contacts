@@ -26,7 +26,7 @@ function InputWithCaption(props: Props) {
             case 'email':
                 return 'Шаблон: welcome@gmail.com';
             case 'name':
-                return 'Имя содержит только буквы';
+                return 'Шаблон: Andrey Diakonov';
             case 'phone':
                 return 'Шаблон: 89854325678';
             case 'city':

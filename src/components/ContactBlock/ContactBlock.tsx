@@ -1,13 +1,22 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import ContactMenu from "../ContactMenu/ContactMenu";
 import ContactList from "../ContactList/ContactList";
-import {ContactClick} from "../SideContent/SideContent";
+import {ContactClick, IContactsWithSearchName} from "../SideContent/SideContent";
+import {useGetContactsQuery} from "../../services/ContactsAPI";
+import {MainUserInfoContext} from "../../configurations/User";
+import {IContact} from "../../configurations/Contact";
 
-function ContactBlock(props: ContactClick) {
+export interface ContactProps extends ContactClick {
+    searchedContacts: IContactsWithSearchName
+}
+
+function ContactBlock(props: ContactProps) {
+    const {user} = useContext(MainUserInfoContext).userInfo;
+    const {data: contacts} = useGetContactsQuery(user.id);
     return (
         <div className="contact-block">
             <ContactMenu />
-            <ContactList contactClick={props.contactClick}/>
+            <ContactList allUserContacts={contacts as IContact[]} searchedContacts={props.searchedContacts} contactClick={props.contactClick}/>
         </div>
     );
 }
