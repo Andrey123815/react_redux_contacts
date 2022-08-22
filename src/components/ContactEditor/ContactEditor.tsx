@@ -4,7 +4,13 @@ import InputWithCaption from "../InputWithCaption/InputWithCaption";
 import './ContactEditor.css';
 import {stringAvatar} from "../../libraries/AvatarView";
 import {CurrentContactContext, IContactContext} from "../../configurations/Contact";
-import {ADDRESS_REGEXP, EMAIL_REGEXP, NAME_REGEXP, PHONE_REGEXP} from "../../configurations/Validation";
+import {
+    CITY_REGEXP,
+    EMAIL_REGEXP,
+    NAME_REGEXP,
+    PHONE_REGEXP,
+    STREET_REGEXP
+} from "../../configurations/Validation";
 
 function ContactEditor() {
     const {contact,} = React.useContext<IContactContext>(CurrentContactContext);
@@ -27,10 +33,10 @@ function ContactEditor() {
                                           placeholder="Телефон" contactKey="phone" />
                     </div>
                     <div className="main-block__props-line">
-                        <InputWithCaption pattern={ADDRESS_REGEXP}
+                        <InputWithCaption pattern={CITY_REGEXP}
                                           captionType="top" captionText="Город"
                                           placeholder="Город" contactKey="city" />
-                        <InputWithCaption pattern={ADDRESS_REGEXP}
+                        <InputWithCaption pattern={STREET_REGEXP}
                                           captionType="top" captionText="Улица"
                                           placeholder="Улица" contactKey="street" />
                     </div>

@@ -3,95 +3,85 @@
     {
       "id": 1,
       "name": "Leanne Graham",
-      "username": "Bret",
       "avatar": "",
       "email": "@",
       "password": "1",
       "street": "Kulas Light",
       "city": "Gwenborough",
-      "phone": "1-770-736-8031 x56442"
+      "phone": "89515207442"
     },
     {
       "id": 2,
       "name": "Ervin Howell",
-      "username": "Antonette",
       "email": "@",
       "password": "2",
       "street": "Victor Plains",
       "city": "Wisokyburgh",
-      "phone": "010-692-6593 x09125"
+      "phone": "89653282040"
     },
     {
       "id": 3,
       "name": "Clementine Bauch",
-      "username": "Samantha",
       "email": "Nathan@yesenia.net",
       "street": "Douglas Extension",
       "city": "McKenziehaven",
-      "phone": "1-463-123-4447"
+      "phone": "89831723931"
     },
     {
       "id": 4,
       "name": "Patricia Lebsack",
-      "username": "Karianne",
       "email": "Julianne.OConner@kory.org",
       "street": "Hoeger Mall",
       "city": "South Elvis",
-      "phone": "493-170-9623 x156"
+      "phone": "867545634523"
     },
     {
       "id": 5,
       "name": "Chelsey Dietrich",
-      "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
       "street": "Skiles Walks",
       "city": "Roscoeview",
-      "phone": "(254)954-1289"
+      "phone": "89511214677"
     },
     {
       "id": 6,
       "name": "Mrs. Dennis Schulist",
-      "username": "Leopoldo_Corkery",
       "email": "Karley_Dach@jasper.info",
       "street": "Norberto Crossing",
       "city": "South Christy",
-      "phone": "1-477-935-8478 x6430"
+      "phone": "89653710956"
     },
     {
       "id": 7,
       "name": "Kurtis Weissnat",
-      "username": "Elwyn.Skiles",
       "email": "Telly.Hoeger@billy.biz",
       "street": "Rex Trail",
       "city": "Howemouth",
-      "phone": "210.067.6132"
+      "phone": "89535854005"
     },
     {
       "id": 8,
       "name": "Nicholas Runolfsdottir V",
-      "username": "Maxime_Nienow",
       "email": "Sherwood@rosamond.me",
       "street": "Ellsworth Summit",
       "city": "Aliyaview",
-      "phone": "586.493.6943 x140"
+      "phone": "89677913154"
     },
     {
       "id": 9,
       "name": "Glenna Reichert",
-      "username": "Delphine",
       "email": "Chaim_McDermott@dana.io",
       "street": "Dayna Park",
       "city": "Bartholomebury",
-      "phone": "(775)976-6794 x41206"
+      "phone": "89503048720"
     },
     {
       "id": 10,
       "name": "Clementina DuBuque",
-      "username": "Moriah.Stanton",
       "email": "Rey.Padberg@karina.biz",
       "street": "Kattie Turnpike",
       "city": "Lebsackbury",
-      "phone": "024-648-3804"
+      "phone": "89615247278"
     }
   ],
   "contacts": [
@@ -99,8 +89,7 @@
       "id": 2,
       "contactOwnerID": 1,
       "name": "Glenna Reichert",
-      "username": "Delphine",
-      "email": "Chaim_McDermott@dana.io",
+      "email": "curt@yandex.ru",
       "street": "Dayna Park",
       "city": "Bartholomebury",
       "phone": "89453456789"
@@ -108,34 +97,33 @@
     {
       "id": 3,
       "contactOwnerID": 1,
-      "name": "Clementina DuBuque",
-      "username": "Moriah.Stanton",
-      "email": "Rey.Padberg@karina.biz",
+      "name": "Clementina Duque",
+      "email": "cwerwet@mail.ru",
       "street": "Kattie Turnpike",
       "city": "Lebsackbury",
-      "phone": "024-648-3804"
-    },
-    {
-      "city": "dbdbdfb",
-      "phone": "dbdbdfbd",
-      "street": "dbdffbdbfbd",
-      "contactOwner": 0,
-      "email": "dfbdbf",
-      "id": 4,
-      "name": "Fsddbdf"
-    },
-    {
-      "city": "dfgdfg",
-      "phone": "dfdgdf",
-      "street": "dfgdfgd",
-      "contactOwnerID": 1,
-      "email": "dfgfd",
-      "id": 5,
-      "name": "dbdfbd dd"
+      "phone": "89615247278"
     },
     {
       "city": "Москва",
-      "phone": "8787757567567",
+      "phone": "89653710956",
+      "street": "Васильевская",
+      "contactOwner": 0,
+      "email": "dfbdbf",
+      "id": 4,
+      "name": "Angry Bird"
+    },
+    {
+      "city": "Волгоград",
+      "phone": "89674563454",
+      "street": "Смоленская",
+      "contactOwnerID": 1,
+      "email": "smol@mail.ru",
+      "id": 5,
+      "name": "Petrov Ivan"
+    },
+    {
+      "city": "Москва",
+      "phone": "87877575675",
       "street": "Питерская",
       "contactOwnerID": 1,
       "email": "ome@gmail.com",
