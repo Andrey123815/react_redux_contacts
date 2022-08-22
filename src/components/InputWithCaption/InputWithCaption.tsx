@@ -11,7 +11,6 @@ interface Props {
     captionText: string,
     placeholder: string,
     contactKey: ContactIdentType;
-    canBeEmpty: boolean,
     pattern: RegExp
 }
 
