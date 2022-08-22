@@ -8,10 +8,12 @@ import {CurrentContactContext, defaultContact, IContact} from "../../configurati
 import {useGetContactMutation} from "../../services/ContactsAPI";
 
 export type ContactIdentType = 'email' | 'name' | 'phone' | 'city' | 'street';
+
 export type ActionType = ContactIdentType | 'clean' | 'fill';
+
 export interface Action {
     type: ActionType,
-    payload: string | IContact
+    payload?: string | IContact
 }
 
 function reducer(state: IContact, action: Action): IContact {
@@ -23,13 +25,10 @@ function reducer(state: IContact, action: Action): IContact {
         case 'fill':
             return payload as IContact;
         default:
-            if (typeof payload === 'string') {
-                return {
-                    ...state,
-                    [type]: payload
-                };
-            }
-            throw Error('typeof payload !== string in default section');
+            return {
+                ...state,
+                [type]: payload
+            };
     }
 }
 
@@ -55,7 +54,7 @@ function Content() {
         return (
           <div className="content">
               <CurrentContactContext.Provider value={{contact, dispatch}} >
-                  <CentralContent updateMode={isUpdatingMode} />
+                  <CentralContent updateInfo={{isUpdatingMode, setIsUpdatingMode}} />
                   <SideContent contactClick={contactClick}/>
               </CurrentContactContext.Provider>
           </div>

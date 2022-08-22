@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
 import './InputWithCaption.css';
-import {CurrentContactContext, IContact, IContactContext} from "../../configurations/Contact";
+import {CurrentContactContext, IContactContext} from "../../configurations/Contact";
 import {ContactIdentType} from "../Content/Content";
 
 type Caption = 'top' | 'side';

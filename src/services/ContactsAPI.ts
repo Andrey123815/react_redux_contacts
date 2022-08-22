@@ -35,7 +35,7 @@ export const contactsApi = createApi({
         }),
         updateContact: builder.mutation<IUser[], IContact>({
             query: (contact) => ({
-                url: `/contacts`,
+                url: `/contacts/${contact.id}`,
                 method: 'PUT',
                 body: contact
             }),

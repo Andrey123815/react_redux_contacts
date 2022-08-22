@@ -3,13 +3,7 @@ import {Avatar} from "@mui/material";
 import InputWithCaption from "../InputWithCaption/InputWithCaption";
 import './ContactEditor.css';
 import {stringAvatar} from "../../libraries/AvatarView";
-// import {Action} from "../CentralContent/CentralContent";
-import {CurrentContactContext, IContact, IContactContext} from "../../configurations/Contact";
-
-// export interface Props {
-//     updateContact: (action: Action) => void,
-//     inputContactData: IContact
-// }
+import {CurrentContactContext, IContactContext} from "../../configurations/Contact";
 
 function ContactEditor() {
     const {contact,} = React.useContext<IContactContext>(CurrentContactContext);
