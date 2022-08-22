@@ -1,5 +1,11 @@
 ## Contact's App
 
+### About App
+
+The application has the ability to store user data such as phone number, address, name, email. 
+These data can be easily and quickly changed, add any combinations of them to yourself and, 
+due to the built-in search by name, quickly find the right contact.
+
 ## Using languages and technologies:
 
 1) React
