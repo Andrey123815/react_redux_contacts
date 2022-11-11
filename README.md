@@ -1,10 +1,11 @@
 ## Contact's App
 
-### About App
+Подсказка: для корректного отображения данных приложения,
+нужно локально запустить сервер для отдачи данных. 
+<br/><br/>
+Запуск производится командой
 
-The application has the ability to store user data such as phone number, address, name, email. 
-These data can be easily and quickly changed, add any combinations of them to yourself and, 
-due to the built-in search by name, quickly find the right contact.
+```npm run server```
 
 ## Using languages and technologies:
 
@@ -14,30 +15,18 @@ due to the built-in search by name, quickly find the right contact.
 4) RTK Query
 5) JSON-server
 6) Package `concurrently` (for parallel starting JSON-server and React App)
-7) MUI components API
 
 ## How to start
 
 ### For dependencies installing
 
-```
-  npm i
-```
+```npm run install```
 
 ### For run JSON-server and React App
 
-```
-  npm run all
-```
+```npm run start```
 
 ### Node version
 
-```
-v17.7.1
-```
+```v17.7.1```
 
-### Check all commits history you can at branch `master`
-
-```
-https://github.com/Andrey123815/react_redux_contacts/tree/master
-```
